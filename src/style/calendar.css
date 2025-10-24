@@ -1,0 +1,295 @@
+/* Custom styles for react-big-calendar */
+
+.rbc-calendar {
+  @apply bg-card text-card-foreground;
+}
+
+.rbc-header {
+  @apply bg-muted text-muted-foreground font-medium py-2 px-1 text-center text-sm border-b border-border;
+}
+
+.rbc-month-view {
+  @apply border border-border;
+}
+
+.rbc-month-row {
+  @apply border-b border-border;
+}
+
+.rbc-date-cell {
+  @apply text-sm p-1;
+}
+
+.rbc-off-range-bg {
+  @apply bg-muted/30;
+}
+
+.rbc-today {
+  @apply bg-primary/10;
+}
+
+.rbc-event {
+  @apply rounded text-xs p-1 cursor-pointer;
+}
+
+.rbc-event-content {
+  @apply text-xs;
+}
+
+.rbc-event-overlaps {
+  @apply shadow-sm;
+}
+
+.rbc-event-continues-prior {
+  @apply rounded-l-none;
+}
+
+.rbc-event-continues-after {
+  @apply rounded-r-none;
+}
+
+.rbc-event-continues-earlier {
+  @apply rounded-t-none;
+}
+
+.rbc-event-continues-later {
+  @apply rounded-b-none;
+}
+
+.rbc-time-view {
+  @apply border border-border;
+}
+
+.rbc-time-header {
+  @apply border-b border-border;
+}
+
+.rbc-time-content {
+  @apply border-t border-border;
+}
+
+.rbc-time-slot {
+  @apply border-b border-border/50;
+}
+
+.rbc-timeslot-group {
+  @apply border-b border-border;
+}
+
+.rbc-day-slot .rbc-events-container {
+  @apply mr-0;
+}
+
+.rbc-day-slot .rbc-event {
+  @apply border-0;
+}
+
+.rbc-day-slot .rbc-event-label {
+  @apply hidden;
+}
+
+.rbc-agenda-view {
+  @apply border border-border;
+}
+
+.rbc-agenda-view .rbc-agenda-date-cell {
+  @apply bg-muted text-muted-foreground font-medium p-2 border-r border-border;
+}
+
+.rbc-agenda-view .rbc-agenda-time-cell {
+  @apply bg-muted/50 text-muted-foreground p-2 border-r border-border;
+}
+
+.rbc-agenda-view .rbc-agenda-event-cell {
+  @apply p-2 border-b border-border;
+}
+
+.rbc-agenda-view .rbc-agenda-event-cell:hover {
+  @apply bg-muted/50;
+}
+
+.rbc-toolbar {
+  @apply flex items-center justify-between p-4 border-b border-border;
+}
+
+.rbc-toolbar button {
+  @apply px-3 py-1 text-sm font-medium bg-muted text-muted-foreground border border-border rounded hover:bg-muted/80 hover:text-foreground transition-colors;
+}
+
+.rbc-toolbar button.rbc-active {
+  @apply bg-primary text-primary-foreground border-primary;
+}
+
+.rbc-toolbar button:hover {
+  @apply bg-muted/80 text-foreground;
+}
+
+.rbc-toolbar button:focus {
+  @apply outline-none ring-2 ring-primary/20;
+}
+
+.rbc-toolbar button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.rbc-toolbar .rbc-toolbar-label {
+  @apply text-lg font-semibold text-foreground;
+}
+
+.rbc-btn-group {
+  @apply flex items-center space-x-1;
+}
+
+.rbc-btn-group button {
+  @apply px-2 py-1 text-xs;
+}
+
+.rbc-btn-group button:first-child {
+  @apply rounded-r-none;
+}
+
+.rbc-btn-group button:last-child {
+  @apply rounded-l-none;
+}
+
+.rbc-btn-group button:not(:first-child):not(:last-child) {
+  @apply rounded-none;
+}
+
+.rbc-btn-group button:only-child {
+  @apply rounded;
+}
+
+.rbc-btn-group button + button {
+  @apply border-l-0;
+}
+
+.rbc-btn-group button.rbc-active {
+  @apply bg-primary text-primary-foreground border-primary;
+}
+
+.rbc-btn-group button:hover:not(.rbc-active) {
+  @apply bg-muted/80 text-foreground;
+}
+
+.rbc-popover {
+  @apply bg-card border border-border rounded-lg shadow-lg z-50;
+}
+
+.rbc-popover-content {
+  @apply p-3;
+}
+
+.rbc-popover .rbc-event {
+  @apply bg-transparent text-foreground p-0 mb-1;
+}
+
+.rbc-popover .rbc-event:last-child {
+  @apply mb-0;
+}
+
+.rbc-popover .rbc-event-content {
+  @apply text-sm;
+}
+
+.rbc-overlay {
+  @apply bg-card border border-border rounded-lg shadow-lg z-50;
+}
+
+.rbc-overlay-header {
+  @apply bg-muted text-muted-foreground font-medium p-2 border-b border-border;
+}
+
+.rbc-overlay-body {
+  @apply p-2;
+}
+
+.rbc-overlay-body .rbc-event {
+  @apply bg-transparent text-foreground p-1 mb-1 border-b border-border/50;
+}
+
+.rbc-overlay-body .rbc-event:last-child {
+  @apply mb-0 border-b-0;
+}
+
+/* Dark theme specific adjustments */
+.dark .rbc-calendar {
+  @apply bg-card text-card-foreground;
+}
+
+.dark .rbc-header {
+  @apply bg-muted text-muted-foreground;
+}
+
+.dark .rbc-off-range-bg {
+  @apply bg-muted/20;
+}
+
+.dark .rbc-today {
+  @apply bg-primary/20;
+}
+
+.dark .rbc-toolbar button {
+  @apply bg-muted text-muted-foreground border-border;
+}
+
+.dark .rbc-toolbar button:hover {
+  @apply bg-muted/80 text-foreground;
+}
+
+.dark .rbc-toolbar button.rbc-active {
+  @apply bg-primary text-primary-foreground border-primary;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .rbc-toolbar {
+    @apply flex-col space-y-2;
+  }
+  
+  .rbc-toolbar .rbc-toolbar-label {
+    @apply text-base;
+  }
+  
+  .rbc-btn-group {
+    @apply flex-wrap;
+  }
+  
+  .rbc-btn-group button {
+    @apply text-xs px-2 py-1;
+  }
+}
+
+/* Custom event colors */
+.rbc-event.event-complete {
+  @apply bg-green-500 text-white;
+}
+
+.rbc-event.event-partial {
+  @apply bg-yellow-500 text-white;
+}
+
+.rbc-event.event-incomplete {
+  @apply bg-gray-500 text-white;
+}
+
+.rbc-event.event-error {
+  @apply bg-red-500 text-white;
+}
+
+/* Event type specific colors */
+.rbc-event.event-phd {
+  @apply bg-blue-500 text-white;
+}
+
+.rbc-event.event-associate {
+  @apply bg-green-500 text-white;
+}
+
+.rbc-event.event-doctor-science {
+  @apply bg-purple-500 text-white;
+}
+
+.rbc-event.event-professor {
+  @apply bg-orange-500 text-white;
+}

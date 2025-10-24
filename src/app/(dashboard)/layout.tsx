@@ -7,7 +7,7 @@ export default function DashboardLayout({
 }) {
   return (
     <>
-      <TopNav title="Dashboard" />
+      <TopNav title="Academic Jury Calendar" />
       <main>{children}</main>
     </>
   );
